@@ -1,0 +1,27 @@
+{
+  "name": "node_api_games",
+  "version": "1.0.0",
+  "description": "API feita em Node JS relacionado a Games",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EduGames652/node_api_games.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EduGames652/node_api_games/issues"
+  },
+  "homepage": "https://github.com/EduGames652/node_api_games#readme",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
