@@ -1,10 +1,13 @@
 const express = require("express");
 const dotenv = require("dotenv").config();
 const path = require('path');
+const cors = require("cors")
 const { normalize } = require("path");
-const router = require("./api/routes/router")
+const router = require("./routes/router")
 const api = express();
 
+api.use(cors())
+api.use(express.json())
 api.use(router)
 
 const port = normalize(process.env.PORT || '3333');
