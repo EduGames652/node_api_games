@@ -4,8 +4,6 @@ services:
   mongodb:
     container_name: MongoDB
     image: mongo:latest
-    env_file:
-      - ./mongodb.env
     ports:
       - "27017:27017"
     volumes:
