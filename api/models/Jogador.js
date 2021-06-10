@@ -1,26 +1,22 @@
 const mongoose = require('../config/connection/connection');
 
-const GameSchema = new mongoose.Schema({
+const JogadorSchema = new mongoose.Schema({
   nome: {
     type: String,
     unique: true,
     required: true,
   },
-  descricao: {
-    type: String,
-    required: true,
-  },
-  jogadores: [{
+  game: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: 'Jogadores',
+    ref: 'Games',
     require: true,
-  }],
+  },
   createdAt: {
     type: Date,
     default: Date.now,
   },
 });
 
-const Game = mongoose.model('Game', GameSchema);
+const Jogador = mongoose.model('Jogador', JogadorSchema);
 
-module.exports = Game;
+module.exports = Jogador;
