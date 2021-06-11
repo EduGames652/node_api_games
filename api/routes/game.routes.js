@@ -1,14 +1,12 @@
 const express = require("express");
-// const GameController = require("../controllers/gameController");
+const GameController = require("../controllers/gameController");
 
 const gameRoutes = express.Router();
 
-// router.get('/', (req, res) => res.json({ Server: 'OK'}));
-
-gameRoutes.get('/games', api.api.controllers.GameController.index);
-gameRoutes.get('/games/:_id',  api.api.controllers.GameController.detail);
-gameRoutes.post('/games',  api.api.controllers.GameController.store);
-gameRoutes.delete('/games/:_id',  api.api.controllers.GameController.delete);
-gameRoutes.put('/games',  api.api.controllers.GameController.update);
+gameRoutes.get('/games', GameController.list);
+gameRoutes.get('/games/:_id', GameController.find);
+gameRoutes.post('/games', GameController.create);
+gameRoutes.delete('/games/:_id', GameController.delete);
+gameRoutes.put('/games/:_id', GameController.update);
 
 module.exports = gameRoutes;

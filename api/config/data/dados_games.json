@@ -1,20 +1,12 @@
 [{
-	"nome": "League of Legends",
-	"descricao": "League of Legends é um jogo eletrônico online gratuito, do gênero batalha multijogador, desenvolvido e publicado pela Riot Games em 2009, para os sistemas Microsoft Windows e Mac OS X, inspirado no modo Defense of the Ancients do jogo Warcraft III: The Frozen Throne"
+  "nome": "Counter-Strike: Global Offensive",
+  "descricao": "Counter-Strike: Global Offensive é um jogo online desenvolvido pela Valve Corporation e pela Hidden Path Entertainment, sendo uma sequência de Counter-Strike: Source."
 },
 {
   "nome": "Dota 2",
   "descricao": "Dota 2 é um jogo eletrônico gratuito do gênero batalha multijogador, desenvolvido pela produtora Valve Corporation como sequência do Defense of the Ancients, lançado em julho de 2013 na plataforma Steam"
 },
 {
-  "nome": "Civilization VI",
-  "descricao": "Civilization VI é um jogo eletrônico desenvolvido pela Firaxis Games e pela 2K Games. É a sequência de Civilization V, apresentando diferenças tanto nos gráficos quanto na interface com o seu novo motor gráfico. Seu lançamento ocorreu em Outubro de 2016"
-},
-{
-  "nome": "StarCraft II: Wings of Liberty",
-  "descricao": "StarCraft II: Wings of Liberty é um jogo eletrônico para computador de estratégia e ficção científica militar, desenvolvido pela Blizzard Entertainment, um estúdio americano, como a sequência direta de StarCraft, jogo aclamado pela crítica e público."
-},
-{
-  "nome": "Counter-Strike: Global Offensive",
-  "descricao": "Counter-Strike: Global Offensive é um jogo online desenvolvido pela Valve Corporation e pela Hidden Path Entertainment, sendo uma sequência de Counter-Strike: Source."
+	"nome": "League of Legends",
+	"descricao": "League of Legends é um jogo eletrônico online gratuito, do gênero batalha multijogador, desenvolvido e publicado pela Riot Games em 2009, para os sistemas Microsoft Windows e Mac OS X, inspirado no modo Defense of the Ancients do jogo Warcraft III: The Frozen Throne"
 }]

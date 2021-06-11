@@ -6,11 +6,10 @@ const JogadorSchema = new mongoose.Schema({
     unique: true,
     required: true,
   },
-  game: {
+  game: [{
     type: mongoose.Schema.Types.ObjectId,
-    ref: 'Games',
-    require: true,
-  },
+    ref: 'Game'
+  }],
   createdAt: {
     type: Date,
     default: Date.now,

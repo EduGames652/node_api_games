@@ -1,51 +1,61 @@
-const Games = require('../models/Game');
+const Game = require('../models/Game');
+
+const { errorMessage, successMessage } = require('../config/helpers/messages');
 
 module.exports = {
-  async index(req, res) {
-    const games = await Games.find();
-    return res.json({ Games: games });
+  async list(req, res) {
+    const games = await Game.find().populate('jogadores', '-game', '-descricao');
+
+    return res.json({ games });
   },
 
-  async detail(req, res) {
-    const { _id } = req.params;
+  async find(req, res) {
     try {
-      const games = await Games.findOne({ _id });
-      return res.json({ Games: games });
+      const { _id } = req.params;
+      const game = await Game.findById(_id).populate('jogadores', '-game', '-descricao');
+
+      if (!game) throw new Error('Game não encontrado');
+
+      return res.json({ game });
     } catch  (err) {
-      return res.json({ error: "Este game não existe!" });
+      return res.json(errorMessage('Game não encontrado'));
     }
   },
 
-  async store(req, res) {
-    const { nome, descricao } = req.body;
+  async create(req, res) {
     try {
-      if (await Games.findOne({ nome }))
-        return res.status(400).json({ error: "Este game já existe!" });
-      const games = await Games.create({ nome, descricao });
-      games.createdAt = undefined
-      return res.status(201).json({ Games: games,  message: "Game cadastrado com sucesso!",  });
+      const { nome, descricao } = req.body;
+      if (await Game.findOne({ nome }))
+        return res.status(400).json(errorMessage('Este game já existe!'));
+
+      await Game.create({ nome, descricao });
+
+      return res.status(201).json(successMessage('Game cadastrado com sucesso!'));
     } catch (err) {
-      return res.status(400).json({ error: "Não foi possível cadastrar este game! Tente novamente." });
+      return res.status(400).json(errorMessage('Não foi possível cadastrar este game! Tente novamente.'));
     }
   },
 
   async update(req, res) {
-    const { _id, nome, descricao } = req.body;
     try {
-      const games = await Games.findByIdAndUpdate({ _id }, { nome, descricao }, { new: true });
-      return res.json({ message: "Game atualizado com sucesso!", games });
+      const { _id } = req.params;
+      const { nome, descricao } = req.body;
+      await Game.findByIdAndUpdate({ _id }, { nome, descricao });
+
+      return res.json(successMessage('Game atualizado com sucesso!'));
     } catch (err) {
-      return res.status(400).json({ error: "Não foi possível atualizar este game! Tente novamente." });
+      return res.status(400).json(errorMessage('Não foi possível atualizar este game! Tente novamente.'));
     }
   },
 
   async delete(req, res) {
-    const { _id } = req.params;
     try {
-      const games = await Games.findByIdAndDelete({ _id });
-      return res.json({ message: "Game deletado com sucesso!" });
+      const { _id } = req.params;
+      await Game.findByIdAndDelete({ _id });
+
+      return res.json(successMessage('Game deletado com sucesso!'));
     } catch (err) {
-      return res.status(400).json({ error: "Não foi possível deletar este game!" });
+      return res.status(400).json(errorMessage('Não foi possível deletar este game!'));
     }
   },
 }

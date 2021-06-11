@@ -12,8 +12,7 @@ const GameSchema = new mongoose.Schema({
   },
   jogadores: [{
     type: mongoose.Schema.Types.ObjectId,
-    ref: 'Jogadores',
-    require: true,
+    ref: 'Jogador'
   }],
   createdAt: {
     type: Date,
