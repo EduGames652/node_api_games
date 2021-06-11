@@ -58,7 +58,6 @@ npm install -g nodemon
 nodemon
 ```
 * Após iniciar o servidor click nesse link -> ([Aplicação](http://localhost:3000))
-<<<<<<< HEAD
 
 ## Insert de Dados
 
@@ -106,5 +105,3 @@ node_api_games/
 ├── package-lock.json
 └── package.json
 ```
-=======
->>>>>>> 36049dd7ac541ad5bc3979d76e162540f3092633
