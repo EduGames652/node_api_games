@@ -58,3 +58,42 @@ nodemon
 ## Requisições
 
 * Acesse a pasta /api/config/data/ la avera um arquivo chamado "Insomnia_data_api.json", este arquivo é a estrutura de requisições utilizada no Insomnia. Docs para [Importação e Exportação](https://support.insomnia.rest/article/172-importing-and-exporting-data) dos dados.
+
+<h1 align="center"> Estrutura do Projeto </h1>
+
+```
+node_api_games/
+├── api/
+│   ├── config/
+│   │   ├── connection/
+│   │   │   └── connection.js
+│   │   ├── data/
+│   │   │   ├── dados_games.json
+│   │   │   ├── dados_jogadores.json
+│   │   │   └── Insomnia_data_api.json
+│   │   ├── helpers/
+│   │   │   ├── index.js
+│   │   │   └── messages.js
+│   ├── controllers/
+│   │   ├── gameController.js
+│   │   └── jogadorController.js
+│   ├── models/
+│   │   ├── Game.js
+│   │   └── Jogador.js
+│   ├── routes/
+│   │   ├── game.routes.js
+│   │   ├── jogador.routes.js
+│   │   └── routes.js
+│   └── server.js
+├── docker/
+│   ├── docker-compose.yml
+│   └── mongodb.env
+├── .editorconfig
+├── .env.tpl
+├── .gitinore
+├── .nvmrc
+├── LICENSE
+├── README.md
+├── package-lock.json
+└── package.json
+```
