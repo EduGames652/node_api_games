@@ -16,6 +16,6 @@ const JogadorSchema = new mongoose.Schema({
   },
 });
 
-const Jogador = mongoose.model('Jogador', JogadorSchema);
+const Jogador = mongoose.model('Jogadores', JogadorSchema);
 
 module.exports = Jogador;

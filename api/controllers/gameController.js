@@ -4,7 +4,7 @@ const { errorMessage, successMessage } = require('../config/helpers/messages');
 
 module.exports = {
   async list(req, res) {
-    const games = await Game.find().populate('jogadores', '-game', '-descricao');
+    const games = await Game.find().populate('jogadores', '-game');
 
     return res.json({ games });
   },
@@ -12,7 +12,7 @@ module.exports = {
   async find(req, res) {
     try {
       const { _id } = req.params;
-      const game = await Game.findById(_id).populate('jogadores', '-game', '-descricao');
+      const game = await Game.findById(_id).populate('jogadores', '-game');
 
       if (!game) throw new Error('Game não encontrado');
 
