@@ -25,6 +25,14 @@
 # **[Insomnia](https://insomnia.rest/)**
 ### O cliente REST API de plataforma cruzada mais intuitivo . Insomnia é um cliente REST API poderoso com gerenciamento de cookies, variáveis ​​de ambiente, geração de código e autenticação para Mac, Window e Linux.
 
+## Insert de Dados
+
+* Acesse a pasta /api/config/data/ para ter alguns exemplos de dados utilizados nos testes!
+
+## Requisições
+
+* Acesse a pasta /api/config/data/ la avera um arquivo chamado "Insomnia_data_api.json", este arquivo é a estrutura de requisições utilizada no Insomnia. Docs para [Importação e Exportação](https://support.insomnia.rest/article/172-importing-and-exporting-data) dos dados.
+
 <h1 align="center"> Instalação </h1>
 
 ## Instalar Dependências
@@ -50,11 +58,3 @@ npm install -g nodemon
 nodemon
 ```
 * Após iniciar o servidor click nesse link -> ([Aplicação](http://localhost:3000))
-
-## Insert de Dados
-
-* Acesse a pasta /api/config/data/ para ter alguns exemplos de dados utilizados nos testes!
-
-## Requisições
-
-* Acesse a pasta /api/config/data/ la avera um arquivo chamado "Insomnia_data_api.json", este arquivo é a estrutura de requisições utilizada no Insomnia. Docs para [Importação e Exportação](https://support.insomnia.rest/article/172-importing-and-exporting-data) dos dados.
